@@ -1,0 +1,151 @@
+/* General layout */
+.app {
+  font-family: "Poppins", sans-serif;
+  background-color: #f1f3f6;
+  min-height: 100vh;
+  color: #333;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #2874f0;
+  color: white;
+  padding: 15px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.logo {
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.cart-info span {
+  background: #ffeb3b;
+  color: #000;
+  padding: 3px 8px;
+  border-radius: 8px;
+  font-weight: bold;
+}
+
+/* Container */
+.container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 30px;
+}
+
+/* Products grid */
+.products {
+  flex: 3;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+/* Product card */
+.product-card {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 15px;
+  text-align: center;
+  transition: 0.3s;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.product-image {
+  width: 100px;
+  height: 120px;
+  object-fit: contain;
+}
+
+.product-title {
+  font-size: 14px;
+  margin: 10px 0;
+  height: 40px;
+  overflow: hidden;
+}
+
+.product-price {
+  font-weight: bold;
+  color: #388e3c;
+  margin: 8px 0;
+}
+
+/* Buttons */
+.add-btn, .remove-btn {
+  padding: 8px 15px;
+  border: none;
+  border-radius: 5px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.add-btn {
+  background-color: #2874f0;
+  color: white;
+}
+
+.add-btn:hover {
+  background-color: #0f5edb;
+}
+
+.remove-btn {
+  background-color: #ff6161;
+  color: white;
+}
+
+.remove-btn:hover {
+  background-color: #e53935;
+}
+
+/* Cart */
+.cart {
+  flex: 1;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  height: fit-content;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.cart-items {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.cart-image {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .cart {
+    margin-top: 20px;
+  }
+}
